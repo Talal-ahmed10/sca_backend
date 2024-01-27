@@ -1,0 +1,52 @@
+import { JwtPayload } from 'jsonwebtoken';
+import { ObjectId } from 'mongoose';
+
+export type EndPointsFunc =
+    | 'auth'
+    | 'register'
+    | 'login'
+    | 'verify_otp'
+    | 'resend_otp'
+    | 'forgot_password'
+    | 'reset_password'
+    | 'changed_password'
+    | 'changed_email'
+    | 'logout'
+    | 'get_one'
+    | 'update_user'
+    | 'remove_user'
+    | 'get_all_users'
+    | 'get_user'
+    | 'block_user'
+    | 'create_admin'
+    | 'get_all_admins'
+    | 'get_admin'
+    | 'block_admin'
+    | 'remove_admin'
+    | 'update_admin'
+    | 'login_admin'
+    | 'logout_user'
+    | 'logout_all'
+    | 'changed_password_admin'
+    | 'create_deck'
+    | 'get_all_deck'
+    | 'get_all_flashcards'
+    | 'update_card_review'
+    | 'become_a_supplier'
+    | 'update_cards'
+    | 'delete_card'
+    | 'delete_inventory'
+    | 'get_deck_info'
+    | 'upload_image'
+    | 'create_inventory'
+    | 'card_with_interval'
+    | 'response_time_calculation'
+    | 'upload_csv'
+    | 'get_all_inventory'
+    | 'update_inventory'
+    | 'threshold_inventory'
+    | 'create_flashcards';
+
+export type Decode = { _id: ObjectId } & JwtPayload;
+
+export type OTP_TYPE = 'none' | 'reset_password' | 'changed_email' | 'authentication';
