@@ -1,0 +1,10 @@
+import express from "express";
+export declare const validateRegister: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateLogin: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateVerifyOTP: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateResendOTP: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateEmail: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateResetPassword: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateChangedPassword: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateNewEmail: (req: express.Request, res: express.Response, next: express.NextFunction) => void;
+export declare const validateDelAcc: (req: express.Request, res: express.Response, next: express.NextFunction) => void;

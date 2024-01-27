@@ -3,12 +3,13 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "node dist/app.js",
     "start:dev": "cross-env NODE_ENV=local nodemon src/app.ts",
     "deploy:dev": "rimraf dist && tsc && sls deploy --stage dev",
     "deploy:prod": "rimraf dist && tsc && sls deploy --stage prod",
     "deploy-func:dev": "rimraf dist && tsc && sls deploy --function api --stage dev",
     "deploy-func:prod": "rimraf dist && tsc && sls deploy --function api --stage prod",
-    "build": "rimraf dist && tsc"
+    "build": "tsc"
   },
   "dependencies": {
     "@aws-sdk/client-s3": "^3.341.0",
