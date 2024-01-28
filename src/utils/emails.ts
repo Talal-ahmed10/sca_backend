@@ -1,15 +1,7 @@
 import nodemailer from 'nodemailer';
 import { emailVerificationTemplate, otpEmailTemplate } from '../template/emails';
 
-const emailConfig = {
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        user: 'talal.algoace@gmail.com',
-        pass: 'rdwd ynoi qbcu qmwv',
-    },
-};
+const emailConfig = {};
 
 export type SendOtpToUserFunc = (otp: string, name: string, email?: string) => void;
 
